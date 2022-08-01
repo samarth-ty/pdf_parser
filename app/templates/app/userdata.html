@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Information</title>
+    </head>
+    <body>
+        <h1>Personal Information</h1>
+        <form method="POST" acttion="{% url 'saveInfo'%}" class="post-form">  
+            {% csrf_token %}  
+            {{ form.as_p }}  
+            <!-- {{ form.Full_Name }}
+            {{ form.Email }} 
+            {{ form.Dob }}
+            {{ form.Phone_Number }} 
+            {{ form.LinkedIn }}
+            {{ form.Skype_Id }}
+            <h2>Paste your folder link here</h2>
+            {{ form.Drive_Link }} -->
+            <!-- {{ form.errors }}  -->
+            <button type="submit" class="submit btn btn-default">Submit</button>  
+    </form> 
+    </body>
+</html>
